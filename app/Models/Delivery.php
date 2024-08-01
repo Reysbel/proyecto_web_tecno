@@ -15,6 +15,7 @@ class Delivery extends Model
         'nombre_apellido',
         'placa',
         'telefono',
+        'ci',
     ];
 
     public function pedidoWebs()

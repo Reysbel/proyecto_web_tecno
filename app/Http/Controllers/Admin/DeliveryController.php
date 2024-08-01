@@ -35,6 +35,7 @@ class DeliveryController extends Controller
             'nombre_apellido' => 'required|string|max:255',
             'placa' => 'required|string|max:255|unique:deliverys',
             'telefono' => 'nullable|string|max:255',
+            'ci' => 'nullable|string|max:255',
         ]);
 
         Delivery::create($request->all());

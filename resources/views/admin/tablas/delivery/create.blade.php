@@ -33,6 +33,10 @@
                             <label for="telefono">Teléfono</label>
                             <input type="text" name="telefono" class="form-control">
                         </div>
+                        <div class="form-group">
+                            <label for="ci">CI</label>
+                            <input type="text" name="ci" class="form-control">
+                        </div>
                         <button type="submit" class="btn btn-primary">Guardar</button>
                     </form>
                 </div>
