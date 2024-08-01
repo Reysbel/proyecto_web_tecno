@@ -1,0 +1,71 @@
+INSERT INTO categorias (nombre, imagen, created_at, updated_at) VALUES
+('Libros', NULL, NOW(), NOW()),
+('Revistas', NULL, NOW(), NOW()),
+('Ciencia Ficción', NULL, NOW(), NOW()),
+('Historia', NULL, NOW(), NOW()),
+('Novelas', NULL, NOW(), NOW()),
+('Infantiles', NULL, NOW(), NOW()),
+('Tecnología', NULL, NOW(), NOW()),
+('Salud', NULL, NOW(), NOW()),
+('Deportes', NULL, NOW(), NOW()),
+('Culinaria', NULL, NOW(), NOW());
+
+INSERT INTO productos (nombre, autor, editorial, breve_descripcion, descripcion, precio_compra, precio, imagen, descuento, total_venta, stock, estado, id_categoria, created_at, updated_at) VALUES
+('Cien Años de Soledad', 'Gabriel García Márquez', 'Sudamericana', 'Una novela épica', 'Descripción detallada de la novela', 50.00, 80.00, 'imagenes/cien_anos.jpg', 0, 80.00, 50, 'activo', 1, NOW(), NOW()),
+('El Quijote', 'Miguel de Cervantes', 'Espasa', 'Una de las mejores obras literarias', 'Descripción detallada de la obra', 40.00, 70.00, 'imagenes/el_quijote.jpg', 0, 70.00, 40, 'activo', 1, NOW(), NOW()),
+('Revista National Geographic', 'Varios', 'NatGeo', 'Edición especial sobre el clima', 'Descripción detallada de la revista', 20.00, 30.00, 'imagenes/natgeo.jpg', 0, 30.00, 100, 'activo', 2, NOW(), NOW()),
+('Revista TIME', 'Varios', 'Time Inc.', 'Edición sobre personajes del año', 'Descripción detallada de la revista', 15.00, 25.00, 'imagenes/time.jpg', 0, 250.00, 80, 'activo', 2, NOW(), NOW()),
+('Fundación', 'Isaac Asimov', 'Gnome Press', 'Primera novela de la serie Fundación', 'Descripción detallada de la novela', 35.00, 60.00, 'imagenes/fundacion.jpg', 0, 60.00, 30, 'activo', 3, NOW(), NOW()),
+('Breve Historia del Tiempo', 'Stephen Hawking', 'Bantam Books', 'Una introducción a la cosmología', 'Descripción detallada del libro', 45.00, 75.00, 'imagenes/historia_tiempo.jpg', 0, 75.00, 25, 'activo', 4, NOW(), NOW()),
+('Donde los Árboles Cantan', 'Laura Gallego', 'SM', 'Una novela de fantasía', 'Descripción detallada de la novela', 30.00, 55.00, 'imagenes/arboles_cantan.jpg', 0, 55.00, 60, 'activo', 5, NOW(), NOW()),
+('El Principito', 'Antoine de Saint-Exupéry', 'Reynal & Hitchcock', 'Un clásico de la literatura infantil', 'Descripción detallada del libro', 25.00, 40.00, 'imagenes/principito.jpg', 0, 40.00, 90, 'activo', 6, NOW(), NOW()),
+('Introducción a la Programación', 'Robert Lafore', 'Pearson', 'Un libro esencial para programadores', 'Descripción detallada del libro', 55.00, 90.00, 'imagenes/introduccion_programacion.jpg', 0, 90.00, 70, 'activo', 7, NOW(), NOW()),
+('Cocina Boliviana', 'Varios', 'La Paz Editorial', 'Recetas tradicionales de Bolivia', 'Descripción detallada del libro', 40.00, 65.00, 'imagenes/cocina_boliviana.jpg', 0, 65.00, 100, 'activo', 10, NOW(), NOW());
+
+INSERT INTO proveedores (encargado, editorial, ci, telefono, correo, direccion, estado, created_at, updated_at) VALUES
+('Juan Perez', 'Sudamericana', '12345678', '123456789', 'juan.perez@example.com', 'Calle Falsa 123, La Paz', 'activo', NOW(), NOW()),
+('Ana Torres', 'Espasa', '87654321', '987654321', 'ana.torres@example.com', 'Av. Siempre Viva 456, Cochabamba', 'activo', NOW(), NOW()),
+('Luis Gomez', 'NatGeo', NULL, '112233445', 'luis.gomez@example.com', 'Calle 7, Santa Cruz', 'activo', NOW(), NOW()),
+('Maria Flores', 'Time Inc.', NULL, '998877665', 'maria.flores@example.com', 'Zona Central, Sucre', 'activo', NOW(), NOW()),
+('Carlos Rodriguez', 'Gnome Press', '19283746', '667788990', 'carlos.rodriguez@example.com', 'Av. del Ejército, Oruro', 'activo', NOW(), NOW()),
+('Carmen Mendoza', 'Bantam Books', '65748392', '554433221', 'carmen.mendoza@example.com', 'Calle de las Flores, Potosí', 'activo', NOW(), NOW()),
+('Jorge Silva', 'SM', '29384756', '443322110', 'jorge.silva@example.com', 'Av. Arce, Tarija', 'activo', NOW(), NOW()),
+('Sara Vargas', 'Reynal & Hitchcock', '38475629', '332211009', 'sara.vargas@example.com', 'Calle del Sol, Beni', 'activo', NOW(), NOW()),
+('Hugo López', 'Pearson', '84736291', '221100998', 'hugo.lopez@example.com', 'Av. 6 de Agosto, Pando', 'activo', NOW(), NOW()),
+('Lucia Morales', 'La Paz Editorial', '47382910', '110099887', 'lucia.morales@example.com', 'Calle de la Paz, La Paz', 'activo', NOW(), NOW());
+
+INSERT INTO compras (nit_recibo, fecha, total_compra, id_proveedor, user_id, created_at, updated_at) VALUES
+('123456789', '2023-07-01', 400.00, 1, 1, NOW(), NOW()),
+('987654321', '2023-07-02', 300.00, 2, 1, NOW(), NOW()),
+('112233445', '2023-07-03', 500.00, 3, 1, NOW(), NOW()),
+('998877665', '2023-07-04', 450.00, 4, 1, NOW(), NOW()),
+('667788990', '2023-07-05', 350.00, 5, 1, NOW(), NOW()),
+('554433221', '2023-07-06', 600.00, 6, 1, NOW(), NOW()),
+('443322110', '2023-07-07', 250.00, 7, 1, NOW(), NOW()),
+('332211009', '2023-07-08', 700.00, 8, 1, NOW(), NOW()),
+('221100998', '2023-07-09', 800.00, 9, 1, NOW(), NOW()),
+('110099887', '2023-07-10', 900.00, 10, 1, NOW(), NOW());
+
+INSERT INTO detalle_compras (cantidad, total, id_producto, id_compra, created_at, updated_at) VALUES
+(5, 250.00, 1, 1, NOW(), NOW()),
+(3, 120.00, 2, 2, NOW(), NOW()),
+(10, 200.00, 3, 3, NOW(), NOW()),
+(6, 150.00, 4, 4, NOW(), NOW()),
+(4, 140.00, 5, 5, NOW(), NOW()),
+(7, 315.00, 6, 6, NOW(), NOW()),
+(8, 200.00, 7, 7, NOW(), NOW()),
+(12, 480.00, 8, 8, NOW(), NOW()),
+(9, 495.00, 9, 9, NOW(), NOW()),
+(15, 675.00, 10, 10, NOW(), NOW());
+
+INSERT INTO promociones (id_producto, nombre, descripcion, descuento, fecha_inicio, fecha_fin, created_at, updated_at) VALUES
+(1, 'Descuento de Verano', 'Promoción de verano para Cien Años de Soledad', 10.00, '2023-07-01', '2023-07-31', NOW(), NOW()),
+(2, 'Oferta Especial', 'Oferta especial para El Quijote', 15.00, '2023-08-01', '2023-08-15', NOW(), NOW()),
+(3, 'Revista NatGeo', 'Descuento en la edición especial', 5.00, '2023-09-01', '2023-09-30', NOW(), NOW()),
+(4, 'Revista TIME', 'Descuento para la edición sobre personajes del año', 7.00, '2023-10-01', '2023-10-15', NOW(), NOW()),
+(5, 'Fundación', 'Descuento en la primera novela de la serie', 12.00, '2023-11-01', '2023-11-30', NOW(), NOW()),
+(6, 'Breve Historia del Tiempo', 'Promoción especial para el libro de Stephen Hawking', 10.00, '2023-12-01', '2023-12-31', NOW(), NOW()),
+(7, 'Donde los Árboles Cantan', 'Descuento en la novela de Laura Gallego', 8.00, '2024-01-01', '2024-01-31', NOW(), NOW()),
+(8, 'El Principito', 'Descuento en el clásico infantil', 5.00, '2024-02-01', '2024-02-28', NOW(), NOW()),
+(9, 'Introducción a la Programación', 'Descuento para programadores', 15.00, '2024-03-01', '2024-03-31', NOW(), NOW()),
+(10, 'Cocina Boliviana', 'Descuento en recetas tradicionales', 10.00, '2024-04-01', '2024-04-30', NOW(), NOW());
